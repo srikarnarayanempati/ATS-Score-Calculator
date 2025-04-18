@@ -1,0 +1,114 @@
+body {
+  font-family: 'Poppins', sans-serif !important;
+  padding-top: 60px; /* for fixed navbar */
+  background-color: #f0f8ff;
+}
+.navbar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #007bff;
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+  color: white !important; /* Optional: make title slightly larger */
+}
+
+/* Main section padding */
+.home-section {
+  min-height: 100vh;
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+}
+
+/* Upload box styles */
+.upload-box {
+  height: 200px;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+  border-style: dotted !important;
+  border-color: #68a1f8 !important;
+}
+
+.upload-box:hover {
+  border-color: #0d6efd;
+  background-color: #f0f8ff;
+}
+.upload-box {
+  background: #fff;
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-box:hover {
+  border-color: #007bff;
+  background-color: #f8f9ff;
+}
+
+.upload-card {
+  border-radius: 20px;
+  padding: 1rem 1.2rem;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}
+
+.upload-icon {
+  font-size: 1.5rem;
+  color: #6c63ff;
+  margin-right: 0.8rem;
+}
+
+.progress {
+  height: 6px;
+  border-radius: 5px;
+}
+.upload-card .progress {
+  width: 100% !important; 
+  min-width: 250px;
+  background-color: #f1f1f1;
+  height: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.upload-card .progress-bar {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.3s ease-in-out;
+}
+.file-info {
+  flex-grow: 1;
+  width: 100%;
+}
+#analysisResult .display-6 {
+  font-weight: bold;
+}
+.score-box {
+  height: 150px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-box h5 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.score-box .display-6 {
+  font-size: 2rem; 
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .score-box {
+    height: auto; 
+  }
+}

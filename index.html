@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATS Score Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!--Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#home-section" style="font-weight: 550;">ATS Score Calculator</a>
+    </div>
+  </nav>
+
+  <!--Home Section -->
+  <section class="container home-section" id="home-section">
+    <div class="row w-100 align-items-center">
+      <!-- Left Text Content -->
+      <div class="col-lg-6 mb-5 mb-lg-0 pe-lg-5">
+        <h1 class="mb-3">Calculate Your Resume Score Instantly</h1>
+        <p class="mb-3">
+          Our ATS Resume Score Calculator helps you optimize your resume for top job success. Get insights on:
+        </p>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> ATS Readability</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Layout & Searchability</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Impact</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Crispness</li>
+        </ul>
+
+        <dotlottie-player
+            src="https://lottie.host/baa5c31c-80dc-4c32-a2e0-d2f05f7c0e31/AJxpj3mBUo.lottie"
+            background="transparent"
+            speed="1"
+            style="width: 300px; height: 300px"
+            loop
+            autoplay
+          ></dotlottie-player>
+      </div>
+
+      <!-- Right Upload Box -->
+      
+      <div class="col-lg-6">
+        <div class="upload-box text-center p-4 rounded-4 shadow-sm position-relative mb-4" id="uploadBox">
+          <i class="fas fa-file-upload fa-3x text-primary mb-3"></i>
+          <p class="fw-semibold mb-1"><a href="#" class="text-decoration-none">Click here</a> to upload your file or drag and drop.</p>
+          <small class="text-muted">Supported Format: PDF, DOCX (5MB max)</small>
+          <input type="file" class="position-absolute top-0 start-0 w-100 h-100 opacity-0" id="resumeInput" accept=".pdf,.docx" />
+        </div>
+        
+      
+
+        <!-- Upload Status -->
+        <div id="uploadStatusArea"></div>
+
+        <!-- Analyze Button -->
+        <div class="text-center mt-3">
+          <button class="btn btn-primary px-4 py-2 rounded-pill d-none" id="analyzeBtn">Analyze</button>
+        </div>
+
+        <!-- Score Output Section -->
+        <div id="analysisResult" class="row mt-4 d-none">
+          <p>NOTE : The following scores are out of 100</p>
+          <div class="col-md-6 col-lg-3 mb-3">
+            <div class="p-3 bg-light rounded shadow text-center score-box">
+              <h5>ATS Score</h5>
+              <div class="display-6 text-primary" id="atsScore">0</div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3">
+            <div class="p-3 bg-light rounded shadow text-center score-box">
+              <h5>Layout & Searchability</h5>
+              <div class="display-6 text-success" id="layoutScore">0</div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3">
+            <div class="p-3 bg-light rounded shadow text-center score-box">
+              <h5>Impact</h5>
+              <div class="display-6 text-danger" id="impactScore">0</div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3">
+            <div class="p-3 bg-light rounded shadow text-center score-box">
+              <h5>Crispness</h5>
+              <div class="display-6 text-warning" id="crispScore">0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1 -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h3 class="fw-bold mb-3">Why check your resume score before applying?</h3>
+      <p>Before applying for any job, knowing your resume score ensures it aligns with the standards most recruiters and Applicant Tracking Systems (ATS) expect. A good score means your resume is optimized with the right formatting, keywords, and structure, helping you avoid getting filtered out automatically and improving your chances of getting noticed.</p>
+      <dotlottie-player
+        src="https://lottie.host/4184f0cb-694a-4761-8b0b-052eddc49b3f/bVynJaOhzB.lottie"
+        background="transparent"
+        speed="1"
+        style="width: 300px; height: 300px"
+        loop
+        autoplay
+      ></dotlottie-player>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section class="py-5">
+    <div class="container">
+      <h3 class="fw-bold mb-3">Get a personalized resume score, in seconds.</h3>
+      <p>With just a quick upload, our tool gives you a tailored resume score within seconds. It analyzes key components like ATS readability, layout, keyword match, and content impact—providing instant feedback so you can take immediate steps to improve before applying to jobs.</p>
+      <dotlottie-player
+        src="https://lottie.host/554afcf4-ebd4-4dcb-a8c0-2d2bc6ffa116/4r96x0S40W.lottie"
+        background="transparent"
+        speed="1"
+        style="width: 300px; height: 300px"
+        loop
+        autoplay
+      ></dotlottie-player>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h3 class="fw-bold mb-3">How our resume checker works</h3>
+      <p>Once you upload your resume, our system scans it using JavaScript-based logic to extract and evaluate relevant data. We look at formatting, keyword density, grammatical accuracy, and overall clarity to calculate your score. Everything runs on the front-end—fast, secure, and private.</p>
+      <dotlottie-player
+      src="https://lottie.host/9183a5d6-d6da-4020-8b39-859bfed4f821/0p02NiczJV.lottie"
+      background="transparent"
+      speed="1"
+      style="width: 300px; height: 300px"
+      loop
+      autoplay
+    ></dotlottie-player>
+    </div>
+  </section>
+
+  <!-- Section 4 -->
+  <section class="py-5">
+    <div class="container">
+      <h3 class="fw-bold mb-3">Why you should use an ATS resume checker</h3>
+      <p>Most companies use ATS software to screen resumes even before a recruiter reads them. Using an ATS resume checker helps you ensure that your document passes those filters. This increases your chances of reaching the interview stage and standing out in a crowded job market.</p>
+      <div class="alert alert-info mt-3" role="alert">
+        💡 <strong>Pro Tip:</strong> Use strong action verbs and align your skills with the job description to boost your ATS compatibility.
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Experience Section -->
+  <section class="py-5 bg-light">
+    <div class="container ">
+      <h3 class="fw-bold mb-3">Experience Makes the Difference</h3>
+      <p>Your resume should highlight not just your responsibilities, but your achievements. Include measurable impact, project involvement, leadership roles, and how you've added value in previous roles.</p>
+
+      <ul class="list-unstyled">
+        <li class="mb-2"><i class="fas fa-briefcase text-primary me-2"></i> Quantify achievements (e.g., "Increased conversions by 20%").</li>
+        <li class="mb-2"><i class="fas fa-project-diagram text-success me-2"></i> Highlight major projects with outcomes.</li>
+        <li class="mb-2"><i class="fas fa-users text-warning me-2"></i> Mention leadership or team collaboration.</li>
+        <li class="mb-2"><i class="fas fa-certificate text-danger me-2"></i> Add certifications or training related to your field.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section 6 -->
+  <section class="py-5">
+    <div class="container">
+      <h3 class="fw-bold mb-3">Disclaimer</h3>
+      <p>This tool provides automated feedback based on general ATS criteria. While we strive to offer helpful and accurate insights, results are not a guarantee of job selection or interview calls. Always pair automated suggestions with human judgment for the best results.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-white text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 ATS Score Calculator | All rights reserved</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
