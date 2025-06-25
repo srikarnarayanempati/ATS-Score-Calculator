@@ -7,12 +7,11 @@ const analyzeBtn = document.getElementById("analyzeBtn");
   resumeInput.addEventListener("change", () => {
     const file = resumeInput.files[0];
     if (!file) return;
-
-    // Clear previous status
+    
     uploadStatusArea.innerHTML = "";
     uploaded = false;
 
-    simulateUpload(file.name, Math.random() > 0.5); // 50% chance of success
+    simulateUpload(file.name, Math.random() > 0.5);
   });
 
   function simulateUpload(filename, isSuccess) {
@@ -66,7 +65,7 @@ const analyzeBtn = document.getElementById("analyzeBtn");
       retryLink.addEventListener("click", (e) => {
         e.preventDefault();
         card.remove();
-        simulateUpload(filename, true); // Retry always succeeds
+        simulateUpload(filename, true);
       });
     }
 
@@ -74,16 +73,16 @@ const analyzeBtn = document.getElementById("analyzeBtn");
     removeBtn.addEventListener("click", () => {
       card.remove();
       analyzeBtn.classList.add("d-none");
-      document.getElementById("analysisResult").classList.add("d-none"); // hide result if removed
+      document.getElementById("analysisResult").classList.add("d-none");
       uploaded = false;
     });
   }
 
-  // Analyze Button Logic
+  
   analyzeBtn.addEventListener("click", () => {
     if (!uploaded) return;
 
-    // Get the uploaded file and process it
+  
     const file = resumeInput.files[0];
     const fileReader = new FileReader();
 
@@ -104,7 +103,7 @@ const analyzeBtn = document.getElementById("analyzeBtn");
     fileReader.readAsArrayBuffer(file);
   });
 
-  // PDF Parsing using pdf.js
+  
   async function extractTextFromPDF(pdfData) {
     const pdf = await pdfjsLib.getDocument(pdfData).promise;
     let text = "";
@@ -118,13 +117,13 @@ const analyzeBtn = document.getElementById("analyzeBtn");
     return text;
   }
 
-  // DOCX Parsing using Mammoth.js
+  
   async function extractTextFromDOCX(docxData) {
     const result = await mammoth.extractRawText({ arrayBuffer: docxData });
     return result.value;
   }
 
-  // Score Calculation based on extracted text
+  
   function calculateScores(text) {
     const atsScore = calculateATSScore(text);
     const layoutScore = calculateLayoutScore(text);
@@ -146,7 +145,7 @@ const analyzeBtn = document.getElementById("analyzeBtn");
   }
 
   function calculateLayoutScore(text) {
-    // Simple check for presence of section headings
+    
     const headings = ["experience", "education", "skills"];
     let score = 0;
     headings.forEach(heading => {
@@ -180,18 +179,18 @@ const analyzeBtn = document.getElementById("analyzeBtn");
   }
 
   function displayScores(scores) {
-    // Display scores dynamically in boxes
+    
     document.getElementById("atsScore").innerText = scores.atsScore;
     document.getElementById("layoutScore").innerText = scores.layoutScore;
     document.getElementById("impactScore").innerText = scores.impactScore;
     document.getElementById("crispScore").innerText = scores.crispnessScore;
 
-    // Show the result section
+    
     document.getElementById("analysisResult").classList.remove("d-none");
 
     const analysisSection = document.getElementById("analysisResult");
   analysisSection.scrollIntoView({
-    behavior: "smooth", // Smooth scroll animation
-    block: "start"      // Align to the top of the viewport
+    behavior: "smooth",
+    block: "start"      
   });
   }
