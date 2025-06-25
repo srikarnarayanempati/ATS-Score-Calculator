@@ -1,6 +1,6 @@
 body {
   font-family: 'Poppins', sans-serif !important;
-  padding-top: 60px; /* for fixed navbar */
+  padding-top: 60px;
   background-color: #f0f8ff;
 }
 .navbar {
@@ -11,10 +11,9 @@ body {
 
 .navbar-brand {
   font-size: 1.6rem;
-  color: white !important; /* Optional: make title slightly larger */
+  color: white !important;
 }
 
-/* Main section padding */
 .home-section {
   min-height: 100vh;
   gap: 2rem;
@@ -23,7 +22,6 @@ body {
   padding-top: 80px;
 }
 
-/* Upload box styles */
 .upload-box {
   height: 200px;
   cursor: pointer;
