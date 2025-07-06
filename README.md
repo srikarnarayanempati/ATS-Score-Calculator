@@ -1,6 +1,6 @@
-# 📄 ATS Score Calculator
+# 📄 ATS Score Generator
 
-The **ATS (Applicant Tracking System) Score Calculator** is a web-based tool that allows users to upload their resume and get an estimated ATS score based on layout, searchability, keyword impact, and content crispness. Built entirely using **HTML, CSS, and JavaScript**, this tool helps job seekers evaluate and optimize their resumes for ATS software.
+The **ATS (Applicant Tracking System) Score Generator** is a web-based tool that allows users to upload their resume and get an estimated ATS score based on layout, searchability, keyword impact, and content crispness. Built entirely using **HTML, CSS, and JavaScript**, this tool helps job seekers evaluate and optimize their resumes for ATS software.
 
 ## ✨ Features
 
