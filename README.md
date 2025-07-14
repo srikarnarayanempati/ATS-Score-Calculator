@@ -1,24 +1,40 @@
-# 📄 ATS Score Generator
+# 📄 ATS Resume Score Generator
 
-The **ATS (Applicant Tracking System) Score Generator** is a web-based tool that allows users to upload their resume and get an estimated ATS score based on layout, searchability, keyword impact, and content crispness. Built entirely using **HTML, CSS, and JavaScript**, this tool helps job seekers evaluate and optimize their resumes for ATS software.
+A Simple ATS web application that lets you upload your resume and get instant feedback on its readability, layout, and content strength.
+Built using **HTML**, **CSS (Bootstrap)**, and **vanilla JavaScript**, it uses the [Affinda Resume Parser API](https://www.affinda.com/) to evaluate your resume on multiple key metrics like:
 
-## ✨ Features
+- ✅ **ATS Score** (based on required sections & contact info)
+- 🎯 **Impact Score** (based on action verbs in experience)
+- 🧩 **Layout Score** (based on section order & structure)
+- ✂️ **Crispness Score** (based on word/sentence length)
 
-- 🗂️ Drag and drop resume upload (PDF)
-- ⚙️ Instant ATS analysis with scoring
-- 📊 Score breakdown:
-  - Layout
-  - Searchability
-  - Impact (keywords)
-  - Crispness (conciseness)
-- 📍 Real-time feedback display with styled UI
-- 📄 Resume preview
+---
 
-## 🛠️ Built With
+## 🚀 Features
 
-- **HTML5**
-- **CSS3** (with responsive design)
-- **Vanilla JavaScript**
-- **PDF.js** (for PDF parsing)
-- **Custom logic** for score calculation
+- 📁 Drag-and-drop file upload with live progress animation
+- 🧠 AI-powered resume analysis using Affinda API
+- 📊 Scorecards for ATS, Impact, Layout, and Crispness
+- ✅ Works with PDF and DOCX files
+- 📱 Fully responsive design
+- 🔄 Smooth scroll and loading spinner on analysis
 
+---
+
+---
+
+## 🔧 Tech Stack
+
+- **Frontend:** HTML5, CSS3, Bootstrap 5, JavaScript (ES6)
+- **Resume Parsing:** Affinda Resume Parser API
+- **File Handling:** PDF.js & Mammoth.js
+- **Icons & UI:** Font Awesome, CDNLogo.com favicon
+
+---
+
+## 📝 How to Use
+
+1. **Clone the repo**  
+   ```bash
+   git clone https://github.com/your-username/ats-score-generator.git
+   cd ats-score-generator
