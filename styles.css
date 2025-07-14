@@ -1,6 +1,6 @@
 body {
   font-family: 'Poppins', sans-serif !important;
-  padding-top: 60px;
+  padding-top: 0px;
   background-color: #f0f8ff;
 }
 .navbar {
@@ -109,4 +109,9 @@ body {
   .score-box {
     height: auto; 
   }
+}
+#loadingSpinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
